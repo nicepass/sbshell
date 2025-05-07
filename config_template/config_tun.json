@@ -62,7 +62,8 @@
 
   "outbounds": [
     { "tag": "🚀 节点选择", "type": "selector", "outbounds": ["🔯 香港自动","🔯 日新自动", "🇭🇰 香港节点", "🇯🇵 日新节点", "🇺🇲 美国节点", "🐸 手动切换", "♻️ 自动选择", "➡️ 直连"] },
-    { "tag": "📹 steamcn", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动","🔯 日新自动", "🇭🇰 香港节点", "🇯🇵 日新节点", "🇺🇲 美国节点", "🐸 手动切换", "➡️ 直连"] },
+    { "tag": "📹 steamcn", "type": "selector", "outbounds": ["🚀 节点选择", "🐸 手动切换", "➡️ 直连"] },
+    { "tag": "📹 bilibili", "type": "selector", "outbounds": ["🚀 节点选择", "🐸 手动切换", "➡️ 直连"] },
     { "tag": "📹 YouTube", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动","🔯 日新自动", "🇭🇰 香港节点", "🇯🇵 日新节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "📹 disney", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动","🔯 日新自动", "🇭🇰 香港节点", "🇯🇵 日新节点", "🇺🇲 美国节点", "🐸 手动切换"] },
     { "tag": "📹 hbo", "type": "selector", "outbounds": ["🚀 节点选择", "♻️ 自动选择", "🔯 香港自动","🔯 日新自动", "🇭🇰 香港节点", "🇯🇵 日新节点", "🇺🇲 美国节点", "🐸 手动切换"] },
@@ -101,6 +102,7 @@
      {"domain": ["clash.razord.top", "yacd.metacubex.one", "yacd.haishan.me", "d.metacubex.one"], "outbound": "➡️ 直连"},
      {"rule_set": "geosite-private", "outbound": "➡️ 直连"},
      {"rule_set": "geosite-steamcn", "outbound": "➡️ 直连"},
+     {"rule_set": "geosite-bilibili", "outbound": "➡️ 直连"},
      {"rule_set": "geosite-chat", "outbound": "🤖 OpenAI"},
      {"rule_set": "geosite-disney", "outbound": "📹 disney"},
      {"rule_set": "geosite-youtube", "outbound": "📹 YouTube"},
@@ -120,6 +122,7 @@
     
    "rule_set": [
       { "tag": "geosite-steamcn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/steam@cn.srs", "download_detour": "➡️ 直连" },
+      { "tag": "geosite-bilibili", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/bilibili.srs", "download_detour": "➡️ 直连" },
       { "tag": "geosite-chat", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/category-ai-chat-!cn.srs", "download_detour": "➡️ 直连" },
       { "tag": "geosite-youtube", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/youtube.srs", "download_detour": "➡️ 直连" },
       { "tag": "geosite-disney", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/sing/geo/geosite/disney.srs", "download_detour": "➡️ 直连" }, 
