@@ -39,6 +39,24 @@
    "final": "dns_proxy",
    "strategy": "ipv4_only"
 },
+  
+  "dns": 
+ {
+   "servers": [
+     {"tag": "local", "type": "udp", "server": "223.5.5.5", "detour": "➡️ 直连"},
+     {"tag": "foreign", "type": "tls", "server": "dns.google:853", "tls": {"enabled": true, "server_name": "dns.google","insecure": false}, "detour": "🚀 节点选择"}
+    ],
+   "rules": [
+      {"clash_mode": "direct", "server": "local"},
+      {"clash_mode": "global", "server": "foreign"},
+      {"query_type": "HTTPS","action": "reject"},
+      {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com"],  "server": "foreign"},
+      {"rule_set": ["geosite-cn", "geosite-direct", "geosite-steamcn", "geosite-apple"], "server": "local"}
+    ],
+   "final": "foreign",
+   "strategy": "ipv4_only",
+   "independent_cache": true
+},
 
 "inbounds": [
   {
