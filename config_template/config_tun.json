@@ -25,7 +25,7 @@
  {
    "servers": [
      {"tag": "local", "type": "udp", "server": "223.5.5.5", "detour": "➡️ 直连"},
-     {"tag": "foreign", "type": "tls", "server": "dns.google", "tls": {"enabled": true, "server_name": "dns.google","insecure": false}, "detour": "🚀 节点选择"}
+     {"tag": "foreign", "type": "tls", "server": "dns.google", "domain_resolver": "local", "tls": {"enabled": true, "server_name": "dns.google","insecure": false}, "detour": "🚀 节点选择"}
     ],
    "rules": [
       {"clash_mode": "direct", "server": "local"},
