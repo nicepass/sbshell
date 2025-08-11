@@ -24,15 +24,15 @@
   "dns": 
  {
    "servers": [
-     {"tag": "local", "type": "udp", "server": "223.5.5.5", "detour": "➡️ 直连"},
-     {"tag": "foreign", "type": "tls", "server": "8.8.4.4", "detour": "🚀 节点选择"}
+     {"tag": "local", "type": "udp", "server": "223.5.5.5"},
+     {"tag": "foreign", "type": "tls", "server": "8.8.4.4"}
     ],
    "rules": [
       {"clash_mode": "direct", "server": "local"},
       {"clash_mode": "global", "server": "foreign"},
       {"query_type": "HTTPS","action": "reject"},
       {"domain_suffix": ["services.googleapis.cn", "googleapis.cn", "xn--ngstr-lra8j.com"],  "server": "foreign"},
-      {"rule_set": ["geosite-cn", "geosite-direct", "geosite-steamcn", "geosite-apple"], "server": "local"}
+      {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"}
     ],
    "final": "foreign",
    "strategy": "ipv4_only",
