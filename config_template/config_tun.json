@@ -90,6 +90,7 @@
  {
    "auto_detect_interface": true,
    "final": "🐠 兜底策略",
+   "default_domain_resolver": {"server": "local"},
    "rules": 
    [
      {"action": "sniff"},
