@@ -90,7 +90,7 @@
  {
    "final": "🐠 漏网之鱼",
    "auto_detect_interface": true,
-   "default_domain_resolver": {"server": "local"}
+   "default_domain_resolver": {"server": "local"},
    "rules": 
    [
      {"action": "sniff", "sniffer": ["http", "tls", "quic", "dns"]},
